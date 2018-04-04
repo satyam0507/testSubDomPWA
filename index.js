@@ -3,6 +3,7 @@ var app = express();
 
 app.set('port', (process.env.PORT || 4444));
 
+app.use(express.static('/'))
 app.get('/:sub/:name', function(req, res) {
     var fileName = req.params.name;
     var sub = req.params.sub||'Home';
