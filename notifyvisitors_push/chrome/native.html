@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <meta name="google" content="notranslate" />
+    
+    <title></title>
+    
+    <link rel="manifest" href="/notifyvisitors_push/chrome/manifest.json">
+ 
+    <style>
+        #pushnotify .bgstyle {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 1501;
+            background: rgba(0,0,0,.8);
+            opacity: 2;
+            filter: alpha(opacity=2);
+        }
+       
+        #pushnotify {
+            margin-top: 20px;
+            position: relative;
+            z-index: 8888;
+            margin-bottom:10px;
+        }
+    </style>
+</head>
+
+<body style="text-align:center;">
+        <div id="pushnotify">
+            <svg width='30px' height='30px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><circle cx="50" cy="50" r="40" stroke-dasharray="163.36281798666926 87.9645943005142" stroke="#1c8c12" fill="none" stroke-width="20"><animateTransform attributeName="transform" type="rotate" values="0 50 50;180 50 50;360 50 50;" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite" begin="0s"></animateTransform></circle></svg>
+        </div> 
+        <span>Subscribing......</span>
+         
+        <script>
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i=0;i<vars.length;i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == variable) {
+                    return pair[1];
+                }
+            } 
+        }
+            
+            
+        var notify_visitors_push = window.notify_visitors_push || {}; (function() { 
+                notify_visitors_push.auth = { bid_e : getQueryVariable('bid_e'), bid : getQueryVariable('bid'), t : getQueryVariable('t'),
+                                                pageUrl : getQueryVariable('pageUrl'), 
+                                                userID : getQueryVariable('userID')
+                                            };
+        var script = document.createElement('script');script.async = true;
+        script.src = (document.location.protocol == 'https:' ? "//d1m8owsrhatsmg.cloudfront.net" : "//cdnp.notifyvisitors.com") + '/js/notify-visitors-push-1.0.js';
+        var entry = document.getElementsByTagName('script')[0];entry.parentNode.insertBefore(script, entry); })();
+        </script>
+        
+</body>
+</html>

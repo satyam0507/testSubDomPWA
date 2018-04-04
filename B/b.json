@@ -1,0 +1,16 @@
+{
+    "name": "testB", 
+    "short_name": "testB",
+    "icons": [ { 
+              "src": "https://s3.amazonaws.com/tagnpin/static/site/invitereferrals.png", 
+              "sizes": "192x192",
+              "type": "image/png" 
+              } ], 
+    "start_url": "/B/b.html?webapp=1&utm_source=NotifyVisitors&utm_medium=pwa",
+    "orientation": "portrait", 
+    "display": "standalone", 
+    "theme_color": "#222",
+    "background_color": "#222", 
+    "gcm_sender_id": "894396236786",
+    "gcm_user_visible_only": true 
+  }

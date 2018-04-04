@@ -1,0 +1,16 @@
+{
+    "name": "testA", 
+    "short_name": "testA",
+    "icons": [ { 
+              "src": "https://s3.amazonaws.com/tagnpin/static/site/notifyvisitors.png", 
+              "sizes": "192x192",
+              "type": "image/png" 
+              } ], 
+    "start_url": "/A/a.html?webapp=1&utm_source=NotifyVisitors&utm_medium=pwa",
+    "orientation": "portrait", 
+    "display": "standalone", 
+    "theme_color": "#333",
+    "background_color": "#333", 
+    "gcm_sender_id": "894396236786",
+    "gcm_user_visible_only": true 
+  }
