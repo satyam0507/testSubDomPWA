@@ -19,6 +19,23 @@ app.get('/service-worker.js', function(req, res) {
     });
 });
 
+app.get('/nv.js', function(req, res) {
+    var options = {
+        root: __dirname + '/',
+        headers: {
+            'x-timestamp': Date.now(),
+            'x-sent': true
+        }
+    };
+
+
+    res.sendFile('service-worker.js', options, function(err) {
+        if (err) {
+            console.log(err);
+        }
+    });
+});
+
 app.get('/:sub/:name', function(req, res) {
     var fileName = req.params.name;
     var sub = req.params.sub||'Home';
